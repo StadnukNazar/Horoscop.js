@@ -470,12 +470,12 @@ function getRandomPrediction(sign, month) {
   return options[Math.floor(Math.random() * options.length)];
 }
 
-// 🔥 ГОЛОВНА СТОРІНКА
+//  ГОЛОВНА СТОРІНКА
 app.get("/", (req, res) => {
   const signs = Object.keys(hohoroscop);
 
   res.send(`
-    <h1>Гороскоп 🌟</h1>
+    <h1>Гороскоп </h1>
     ${signs.map(sign => `
       <form action="/months" method="GET" style="display:inline-block; margin:5px;">
         <input type="hidden" name="sign" value="${sign}">
